@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Employee Management</h1>
+   
+    <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a>
+    <a href="#" routerLink="/login/" class="btn btn-danger float-end">Logout</a>
+    
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th>
+        <th>username</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email</th>
+        <th>birthDate</th>
+        <th>basicSalary</th>
+        <th>status</th>
+        <th>group</th>
+        <th>description</th>
+        <th width="220px">Action</th>
+      </tr>
+      <tr *ngFor="let post of posts
+      | paginate
+        : {
+            itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count
+          };
+        let i = index">
+        <td>{{ post.id }}</td>
+        <td>{{ post.username }}</td>
+        <td>{{ post.firstName }}</td>
+        <td>{{ post.lastName }}</td>
+        <td>{{ post.email }}</td>
+        <td>{{ post.birthDate }}</td>
+        <td>{{ post.basicSalary }}</td>
+        <td>{{ post.status }}</td>
+        <td>{{ post.group }}</td>
+        <td>{{ post.description }}</td>
+        <td>
+          <a href="#" [routerLink]="['/post/', post.id, 'view']" class="btn btn-info" style="background-color: yellow;">View</a>
+          <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary" style="background-color: blue;">Edit</a>
+          <button type="button" (click)="deletePost(post.id)" class="btn btn-danger" style="background-color: red;">Delete</button>
+        </td>
+      </tr>
+    </table>
+    <div class="d-flex justify-content-center">
+      <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)"
+      >
+      </pagination-controls>
+    </div>
+ </div>

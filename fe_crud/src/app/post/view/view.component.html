@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>View Employee</h1>
+   
+    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+    
+    <div>
+        <strong>ID:</strong>
+        <p>{{ post.id }}</p>
+    </div>
+    
+    <div>
+        <strong>username:</strong>
+        <p>{{ post.username }}</p>
+    </div>
+    
+    <div>
+        <strong>firstName:</strong>
+        <p>{{ post.firstName }}</p>
+    </div>
+    <div>
+        <strong>lastName:</strong>
+        <p>{{ post.lastName }}</p>
+    </div>
+    <div>
+        <strong>email:</strong>
+        <p>{{ post.email }}</p>
+    </div>
+    <div>
+        <strong>birthDate:</strong>
+        <p>{{ post.birthDate }}</p>
+    </div>
+    <div>
+        <strong>basicSalary:</strong>
+        <p>{{ post.basicSalary | currency:'RP. ' }}</p>
+    </div>
+    <div>
+        <strong>status:</strong>
+        <p>{{ post.status }}</p>
+    </div>
+    <div>
+        <strong>group:</strong>
+        <p>{{ post.group }}</p>
+    </div>
+    <div>
+        <strong>description:</strong>
+        <p>{{ post.description }}</p>
+    </div>
+    
+</div>

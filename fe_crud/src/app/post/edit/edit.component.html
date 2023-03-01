@@ -1,0 +1,119 @@
+<div class="container">
+    <h1>Update Post</h1>
+    
+    <a href="#" routerLink="/post/index" class="btn btn-primary">Back</a>
+           
+    <form [formGroup]="form" (ngSubmit)="submit()">
+     
+        <div class="form-group">
+            <label for="username">username:</label>
+            <input
+                formControlName="username"
+                id="username"
+                type="text"
+                [(ngModel)]="post.username"
+                class="form-control">
+            <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+                <div *ngIf="f['username'].errors && f['username'].errors['required']">username is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="firstName">firstName:</label>
+            <input
+                formControlName="firstName"
+                id="firstName"
+                type="text"
+                [(ngModel)]="post.firstName"
+                class="form-control">
+            <div *ngIf="f['firstName'].touched && f['firstName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['firstName'].errors && f['firstName'].errors['required']">firstName is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">lastName:</label>
+            <input
+                formControlName="lastName"
+                id="lastName"
+                [(ngModel)]="post.lastName"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['lastName'].touched && f['lastName'].invalid" class="alert alert-danger">
+                <div *ngIf="f['lastName'].errors && f['lastName'].errors['required']">lastName is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">email:</label>
+            <input
+                formControlName="email"
+                id="email"
+                [(ngModel)]="post.email"
+                type="email"
+                class="form-control">
+            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                <div *ngIf="f['email'].errors && f['email'].errors['required']">email is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="birthDate">birthDate:</label>
+            <input
+                formControlName="birthDate"
+                id="birthDate"
+                [(ngModel)]="post.birthDate"
+                type="date"
+                class="form-control">
+            <div *ngIf="f['birthDate'].touched && f['birthDate'].invalid" class="alert alert-danger">
+                <div *ngIf="f['birthDate'].errors && f['birthDate'].errors['required']">birthDate is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="basicSalary">basicSalary:</label>
+            <input
+                formControlName="basicSalary"
+                id="basicSalary"
+                [(ngModel)]="post.basicSalary"
+                type="number"
+                class="form-control">
+            <div *ngIf="f['basicSalary'].touched && f['basicSalary'].invalid" class="alert alert-danger">
+                <div *ngIf="f['basicSalary'].errors && f['basicSalary'].errors['required']">basicSalary is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="status">status:</label>
+            <input
+                formControlName="status"
+                id="status"
+                [(ngModel)]="post.status"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['status'].touched && f['status'].invalid" class="alert alert-danger">
+                <div *ngIf="f['status'].errors && f['status'].errors['required']">status is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="group">group:</label>
+            <input
+                formControlName="group"
+                id="group"
+                [(ngModel)]="post.group"
+                type="text"
+                class="form-control">
+            <div *ngIf="f['group'].touched && f['group'].invalid" class="alert alert-danger">
+                <div *ngIf="f['group'].errors && f['group'].errors['required']">group is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="description">description:</label>
+            <input
+                formControlName="description"
+                id="description"
+                [(ngModel)]="post.description"
+                type="date"
+                class="form-control">
+            <div *ngIf="f['description'].touched && f['description'].invalid" class="alert alert-danger">
+                <div *ngIf="f['description'].errors && f['description'].errors['required']">description is required.</div>
+            </div>
+        </div>
+          
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Update</button>
+    </form>
+</div>
