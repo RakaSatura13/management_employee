@@ -10,13 +10,17 @@ a) Membuat database pada localhost/phpmyadmin dengan nama employee, lalu import 
 
 b) Menginstall composer terlebih dahulu
 
-c) Jalankan Program dengan terminal dengan mengetik php artisan serve
+c) jalankan 'composer install' menggunakan terminal 
+
+d) Jalankan Program dengan terminal dengan mengetik php artisan serve
 
 2. Folder fe_crud (angular)
 
 Langkah - langkah yang perlu dilakukan sebagai berikut :
 
 a) npm install -g@angular/cli
+
+b) 'npm install' untuk menginstall library
 
 b) jalankan program  dengan ( ng serve ) setelah itu akan muncul localhost:4200, atau bisa dijalankan dengan ( ng serve --open) dimana progman tersebut akan otomatis terbuka pada browser default
 
