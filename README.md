@@ -25,3 +25,5 @@ b) 'npm install' untuk menginstall library
 c) jalankan program  dengan ( ng serve ) setelah itu akan muncul localhost:4200, atau bisa dijalankan dengan ( ng serve --open) dimana progman tersebut akan otomatis terbuka pada browser default
 
 Jalankan kedua folder tersebut pada masing - masing terminal agar website dapat berjalan
+
+![](https://i.ibb.co/YL3twPG/image.png)
